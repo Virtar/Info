@@ -16,7 +16,7 @@
     <section class="interactive-section" id="introduccion">
       <h2 onclick="toggleSection('introduccion')">Introducción ▼</h2>
       <div class="content">
-        <p>Esta guía cubre conceptos fundamentales sobre particiones, sistemas de archivos, sistemas operativos y formatos de almacenamiento.</p>
+        <p>Esta guía cubre conceptos fundamentales sobre particiones, sistemas de archivos, sistemas operativos y formatos de almacenamiento. Explora cada sección para obtener información detallada.</p>
       </div>
     </section>
 
@@ -29,17 +29,10 @@
           <li><strong>Primaria:</strong> Máximo 4 por disco. Usadas para instalar sistemas operativos.</li>
           <li><strong>Extendida:</strong> Actúa como contenedor para particiones lógicas.</li>
           <li><strong>Lógica:</strong> Subdivisiones dentro de una partición extendida.</li>
-          <li><strong>GPT (GUID Partition Table):</strong> Sistema moderno que permite más de 4 particiones primarias.</li>
-          <li><strong>MBR (Master Boot Record):</strong> Sistema antiguo limitado a 4 particiones primarias.</li>
+          <li><strong>GPT (GUID Partition Table):</strong> Sistema moderno que permite más de 4 particiones primarias y soporta discos de gran capacidad.</li>
+          <li><strong>MBR (Master Boot Record):</strong> Sistema antiguo limitado a 4 particiones primarias y discos de hasta 2TB.</li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Sección: Sectores y Estructura del Disco -->
-    <section class="interactive-section" id="sectores-disco">
-      <h2 onclick="toggleSection('sectores-disco')">Sectores y Estructura del Disco ▼</h2>
-      <div class="content">
-        <p>Un disco duro está dividido en sectores, cilindros y clusters:</p>
+        <h3>Estructura del Disco</h3>
         <ul>
           <li><strong>Sector:</strong> La unidad mínima de almacenamiento (generalmente 512 bytes o 4KB).</li>
           <li><strong>Cilindro:</strong> Conjunto de sectores alineados verticalmente en un disco.</li>
@@ -55,12 +48,14 @@
       <div class="content">
         <p>Un sistema de archivos gestiona cómo se almacenan y recuperan los datos en un disco:</p>
         <ul>
-          <li><strong>FAT32:</strong> Compatible con múltiples sistemas, límite de 4GB por archivo.</li>
-          <li><strong>NTFS:</strong> Sistema nativo de Windows, soporta grandes archivos y permisos avanzados.</li>
+          <li><strong>FAT32:</strong> Compatible con múltiples sistemas, límite de 4GB por archivo y 2TB por partición.</li>
+          <li><strong>NTFS:</strong> Sistema nativo de Windows, soporta grandes archivos, permisos avanzados y cifrado.</li>
           <li><strong>ext2/ext3/ext4:</strong> Sistemas de Linux, con ext4 siendo el más moderno y eficiente.</li>
-          <li><strong>APFS:</strong> Optimizado para SSDs en macOS.</li>
-          <li><strong>ZFS:</strong> Sistema avanzado con protección contra corrupción de datos.</li>
-          <li><strong>Btrfs:</strong> Alternativa moderna en Linux con snapshots y compresión.</li>
+          <li><strong>APFS:</strong> Optimizado para SSDs en macOS, con soporte para snapshots y clonación.</li>
+          <li><strong>ZFS:</strong> Sistema avanzado con protección contra corrupción de datos, snapshots y compresión.</li>
+          <li><strong>Btrfs:</strong> Alternativa moderna en Linux con snapshots, compresión y reparación automática.</li>
+          <li><strong>exFAT:</strong> Ideal para dispositivos externos, compatible con Windows, macOS y Linux.</li>
+          <li><strong>HFS+:</strong> Sistema de archivos anterior de macOS, reemplazado por APFS.</li>
         </ul>
       </div>
     </section>
@@ -71,11 +66,12 @@
       <div class="content">
         <p>Los sistemas operativos gestionan hardware y software:</p>
         <ul>
-          <li><strong>Windows:</strong> Ampliamente utilizado, compatible con NTFS.</li>
-          <li><strong>Linux:</strong> Versátil, soporta múltiples sistemas de archivos.</li>
-          <li><strong>macOS:</strong> Optimizado para APFS.</li>
+          <li><strong>Windows:</strong> Ampliamente utilizado, compatible con NTFS, FAT32 y exFAT.</li>
+          <li><strong>Linux:</strong> Versátil, soporta múltiples sistemas de archivos como ext4, Btrfs y ZFS.</li>
+          <li><strong>macOS:</strong> Optimizado para APFS, compatible con HFS+ y exFAT.</li>
           <li><strong>Unix:</strong> Base para sistemas modernos como Linux y macOS.</li>
-          <li><strong>Android e iOS:</strong> Sistemas móviles basados en Linux y Unix.</li>
+          <li><strong>Android:</strong> Basado en Linux, usa ext4 y F2FS.</li>
+          <li><strong>iOS:</strong> Basado en Unix, optimizado para APFS.</li>
         </ul>
       </div>
     </section>
@@ -118,6 +114,16 @@
               <td>ZFS</td>
               <td>Ilimitado</td>
               <td>Ilimitado</td>
+            </tr>
+            <tr>
+              <td>Btrfs</td>
+              <td>16EB</td>
+              <td>16EB</td>
+            </tr>
+            <tr>
+              <td>exFAT</td>
+              <td>16EB</td>
+              <td>128PB</td>
             </tr>
           </tbody>
         </table>
