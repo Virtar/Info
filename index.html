@@ -12,15 +12,39 @@
   </header>
 
   <main>
+    <!-- Sección: Introducción -->
+    <section class="interactive-section" id="introduccion">
+      <h2 onclick="toggleSection('introduccion')">Introducción ▼</h2>
+      <div class="content">
+        <p>Esta guía cubre conceptos fundamentales sobre particiones, sistemas de archivos, sistemas operativos y formatos de almacenamiento.</p>
+      </div>
+    </section>
+
     <!-- Sección: Particiones -->
     <section class="interactive-section" id="particiones">
       <h2 onclick="toggleSection('particiones')">Particiones ▼</h2>
       <div class="content">
-        <p>Una partición es una división lógica de un disco duro.</p>
+        <p>Una partición es una división lógica de un disco duro. A continuación, se describen los tipos principales:</p>
         <ul>
-          <li><strong>Primaria:</strong> Máximo 4 por disco.</li>
-          <li><strong>Extendida:</strong> Contiene particiones lógicas.</li>
-          <li><strong>Lógica:</strong> Subdivisiones dentro de una extendida.</li>
+          <li><strong>Primaria:</strong> Máximo 4 por disco. Usadas para instalar sistemas operativos.</li>
+          <li><strong>Extendida:</strong> Actúa como contenedor para particiones lógicas.</li>
+          <li><strong>Lógica:</strong> Subdivisiones dentro de una partición extendida.</li>
+          <li><strong>GPT (GUID Partition Table):</strong> Sistema moderno que permite más de 4 particiones primarias.</li>
+          <li><strong>MBR (Master Boot Record):</strong> Sistema antiguo limitado a 4 particiones primarias.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección: Sectores y Estructura del Disco -->
+    <section class="interactive-section" id="sectores-disco">
+      <h2 onclick="toggleSection('sectores-disco')">Sectores y Estructura del Disco ▼</h2>
+      <div class="content">
+        <p>Un disco duro está dividido en sectores, cilindros y clusters:</p>
+        <ul>
+          <li><strong>Sector:</strong> La unidad mínima de almacenamiento (generalmente 512 bytes o 4KB).</li>
+          <li><strong>Cilindro:</strong> Conjunto de sectores alineados verticalmente en un disco.</li>
+          <li><strong>Cluster:</strong> Grupo de sectores usados para organizar datos.</li>
+          <li><strong>Track:</strong> Circuito circular en una cara del disco.</li>
         </ul>
       </div>
     </section>
@@ -29,12 +53,14 @@
     <section class="interactive-section" id="sistemas-archivos">
       <h2 onclick="toggleSection('sistemas-archivos')">Sistemas de Archivos ▼</h2>
       <div class="content">
-        <p>Un sistema de archivos organiza y gestiona datos en un disco.</p>
+        <p>Un sistema de archivos gestiona cómo se almacenan y recuperan los datos en un disco:</p>
         <ul>
-          <li><strong>FAT32:</strong> Compatible con la mayoría de sistemas, límite de 4GB por archivo.</li>
-          <li><strong>NTFS:</strong> Sistema nativo de Windows, soporta grandes archivos.</li>
-          <li><strong>ext4:</strong> Sistema de archivos común en Linux.</li>
-          <li><strong>APFS:</strong> Sistema optimizado para macOS.</li>
+          <li><strong>FAT32:</strong> Compatible con múltiples sistemas, límite de 4GB por archivo.</li>
+          <li><strong>NTFS:</strong> Sistema nativo de Windows, soporta grandes archivos y permisos avanzados.</li>
+          <li><strong>ext2/ext3/ext4:</strong> Sistemas de Linux, con ext4 siendo el más moderno y eficiente.</li>
+          <li><strong>APFS:</strong> Optimizado para SSDs en macOS.</li>
+          <li><strong>ZFS:</strong> Sistema avanzado con protección contra corrupción de datos.</li>
+          <li><strong>Btrfs:</strong> Alternativa moderna en Linux con snapshots y compresión.</li>
         </ul>
       </div>
     </section>
@@ -43,11 +69,13 @@
     <section class="interactive-section" id="sistemas-operativos">
       <h2 onclick="toggleSection('sistemas-operativos')">Sistemas Operativos ▼</h2>
       <div class="content">
-        <p>Los sistemas operativos gestionan hardware y software.</p>
+        <p>Los sistemas operativos gestionan hardware y software:</p>
         <ul>
           <li><strong>Windows:</strong> Ampliamente utilizado, compatible con NTFS.</li>
           <li><strong>Linux:</strong> Versátil, soporta múltiples sistemas de archivos.</li>
           <li><strong>macOS:</strong> Optimizado para APFS.</li>
+          <li><strong>Unix:</strong> Base para sistemas modernos como Linux y macOS.</li>
+          <li><strong>Android e iOS:</strong> Sistemas móviles basados en Linux y Unix.</li>
         </ul>
       </div>
     </section>
@@ -56,7 +84,7 @@
     <section class="interactive-section" id="limites-tamano">
       <h2 onclick="toggleSection('limites-tamano')">Límites de Tamaño ▼</h2>
       <div class="content">
-        <p>Los límites de tamaño dependen del sistema de archivos.</p>
+        <p>Los límites de tamaño dependen del sistema de archivos:</p>
         <table>
           <thead>
             <tr>
@@ -86,6 +114,11 @@
               <td>8EB</td>
               <td>8EB</td>
             </tr>
+            <tr>
+              <td>ZFS</td>
+              <td>Ilimitado</td>
+              <td>Ilimitado</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -99,50 +132,46 @@
           <div class="timeline-event">
             <div class="event-header" onclick="toggleTimelineEvent(this)">
               <span class="event-date">1981</span>
-              <span class="event-title">Lanzamiento de MS-DOS</span>
+              <span class="event-title">MS-DOS</span>
             </div>
             <div class="event-content">
-              <p>MS-DOS fue el primer sistema operativo ampliamente utilizado en computadoras personales. Introdujo el uso básico de particiones primarias.</p>
+              <p>Primer sistema operativo ampliamente utilizado en computadoras personales.</p>
             </div>
           </div>
-
           <div class="timeline-event">
             <div class="event-header" onclick="toggleTimelineEvent(this)">
               <span class="event-date">1993</span>
-              <span class="event-title">Lanzamiento de Windows NT</span>
+              <span class="event-title">Windows NT</span>
             </div>
             <div class="event-content">
-              <p>Windows NT introdujo el sistema de archivos NTFS, diseñado para mejorar la seguridad y el rendimiento.</p>
+              <p>Introdujo NTFS, un sistema de archivos avanzado.</p>
             </div>
           </div>
-
           <div class="timeline-event">
             <div class="event-header" onclick="toggleTimelineEvent(this)">
               <span class="event-date">1994</span>
-              <span class="event-title">Extensión ext2 en Linux</span>
+              <span class="event-title">ext2</span>
             </div>
             <div class="event-content">
-              <p>El sistema de archivos ext2 se convirtió en el estándar para Linux, mejorando la eficiencia y la capacidad de almacenamiento.</p>
+              <p>Sistema de archivos estándar para Linux.</p>
             </div>
           </div>
-
           <div class="timeline-event">
             <div class="event-header" onclick="toggleTimelineEvent(this)">
               <span class="event-date">2006</span>
-              <span class="event-title">Lanzamiento de ZFS</span>
+              <span class="event-title">ZFS</span>
             </div>
             <div class="event-content">
-              <p>ZFS, desarrollado por Sun Microsystems, introdujo características avanzadas como snapshots y protección contra corrupción de datos.</p>
+              <p>Desarrollado por Sun Microsystems, introdujo snapshots y protección contra corrupción.</p>
             </div>
           </div>
-
           <div class="timeline-event">
             <div class="event-header" onclick="toggleTimelineEvent(this)">
               <span class="event-date">2017</span>
-              <span class="event-title">Introducción de APFS en macOS</span>
+              <span class="event-title">APFS</span>
             </div>
             <div class="event-content">
-              <p>Apple File System (APFS) reemplazó a HFS+ en macOS, optimizando el rendimiento en dispositivos SSD.</p>
+              <p>Optimizado para SSDs en macOS.</p>
             </div>
           </div>
         </div>
