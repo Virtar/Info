@@ -17,6 +17,7 @@
       <h2 onclick="toggleSection('introduccion')">Introducción ▼</h2>
       <div class="content">
         <p>Esta guía cubre conceptos fundamentales sobre particiones, sistemas de archivos, sistemas operativos y formatos de almacenamiento. Explora cada sección para obtener información detallada.</p>
+        <img src="images/intro.jpg" alt="Disco duro y estructura de datos" class="section-image">
       </div>
     </section>
 
@@ -39,6 +40,7 @@
           <li><strong>Cluster:</strong> Grupo de sectores usados para organizar datos.</li>
           <li><strong>Track:</strong> Circuito circular en una cara del disco.</li>
         </ul>
+        <img src="images/disk-structure.jpg" alt="Estructura de un disco duro" class="section-image">
       </div>
     </section>
 
@@ -57,6 +59,7 @@
           <li><strong>exFAT:</strong> Ideal para dispositivos externos, compatible con Windows, macOS y Linux.</li>
           <li><strong>HFS+:</strong> Sistema de archivos anterior de macOS, reemplazado por APFS.</li>
         </ul>
+        <img src="images/filesystems.jpg" alt="Comparativa de sistemas de archivos" class="section-image">
       </div>
     </section>
 
@@ -73,6 +76,7 @@
           <li><strong>Android:</strong> Basado en Linux, usa ext4 y F2FS.</li>
           <li><strong>iOS:</strong> Basado en Unix, optimizado para APFS.</li>
         </ul>
+        <img src="images/os-logos.jpg" alt="Logotipos de sistemas operativos" class="section-image">
       </div>
     </section>
 
@@ -127,6 +131,7 @@
             </tr>
           </tbody>
         </table>
+        <img src="images/limits-chart.jpg" alt="Gráfico de límites de tamaño" class="section-image">
       </div>
     </section>
 
@@ -137,11 +142,32 @@
         <div class="timeline">
           <div class="timeline-event">
             <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">1956</span>
+              <span class="event-title">Primer Disco Duro</span>
+            </div>
+            <div class="event-content">
+              <p>IBM lanzó el primer disco duro, el IBM 305 RAMAC, con una capacidad de 5MB.</p>
+              <img src="images/ibm-ramac.jpg" alt="IBM 305 RAMAC" class="timeline-image">
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">1973</span>
+              <span class="event-title">Sistema de Archivos UNIX</span>
+            </div>
+            <div class="event-content">
+              <p>Se desarrolló el primer sistema de archivos jerárquico en UNIX.</p>
+              <img src="images/unix.jpg" alt="UNIX" class="timeline-image">
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
               <span class="event-date">1981</span>
               <span class="event-title">MS-DOS</span>
             </div>
             <div class="event-content">
-              <p>Primer sistema operativo ampliamente utilizado en computadoras personales.</p>
+              <p>Microsoft lanzó MS-DOS, el primer sistema operativo ampliamente utilizado en computadoras personales.</p>
+              <img src="images/ms-dos.jpg" alt="MS-DOS" class="timeline-image">
             </div>
           </div>
           <div class="timeline-event">
@@ -150,7 +176,8 @@
               <span class="event-title">Windows NT</span>
             </div>
             <div class="event-content">
-              <p>Introdujo NTFS, un sistema de archivos avanzado.</p>
+              <p>Microsoft introdujo Windows NT, que trajo el sistema de archivos NTFS.</p>
+              <img src="images/windows-nt.jpg" alt="Windows NT" class="timeline-image">
             </div>
           </div>
           <div class="timeline-event">
@@ -159,7 +186,18 @@
               <span class="event-title">ext2</span>
             </div>
             <div class="event-content">
-              <p>Sistema de archivos estándar para Linux.</p>
+              <p>Se lanzó ext2, el sistema de archivos estándar para Linux.</p>
+              <img src="images/ext2.jpg" alt="ext2" class="timeline-image">
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">2001</span>
+              <span class="event-title">Windows XP</span>
+            </div>
+            <div class="event-content">
+              <p>Microsoft lanzó Windows XP, que popularizó NTFS.</p>
+              <img src="images/windows-xp.jpg" alt="Windows XP" class="timeline-image">
             </div>
           </div>
           <div class="timeline-event">
@@ -168,7 +206,8 @@
               <span class="event-title">ZFS</span>
             </div>
             <div class="event-content">
-              <p>Desarrollado por Sun Microsystems, introdujo snapshots y protección contra corrupción.</p>
+              <p>Sun Microsystems lanzó ZFS, un sistema de archivos avanzado con snapshots y protección contra corrupción.</p>
+              <img src="images/zfs.jpg" alt="ZFS" class="timeline-image">
             </div>
           </div>
           <div class="timeline-event">
@@ -177,7 +216,8 @@
               <span class="event-title">APFS</span>
             </div>
             <div class="event-content">
-              <p>Optimizado para SSDs en macOS.</p>
+              <p>Apple lanzó APFS, optimizado para SSDs en macOS.</p>
+              <img src="images/apfs.jpg" alt="APFS" class="timeline-image">
             </div>
           </div>
         </div>
