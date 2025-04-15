@@ -1,0 +1,137 @@
+/* Estilos Generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  padding: 1rem;
+}
+
+.interactive-section h2 {
+  background: #fff;
+  padding: 0.8rem;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  margin-top: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interactive-section h2:hover {
+  background: #f0f0f0;
+}
+
+.interactive-section .content {
+  display: none;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+th {
+  background: #4CAF50;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f4f4f4;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Estilos para la Cronología */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #4CAF50;
+  transform: translateX(-50%);
+}
+
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.event-header {
+  background: #fff;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.event-header:hover {
+  background: #f0f0f0;
+}
+
+.event-date {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.event-content {
+  display: none;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
