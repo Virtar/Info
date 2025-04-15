@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Interactiva de Particiones y Sistemas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Guía Interactiva de Particiones y Sistemas</h1>
+  </header>
+
+  <main>
+    <!-- Sección: Particiones -->
+    <section class="interactive-section" id="particiones">
+      <h2 onclick="toggleSection('particiones')">Particiones ▼</h2>
+      <div class="content">
+        <p>Una partición es una división lógica de un disco duro.</p>
+        <ul>
+          <li><strong>Primaria:</strong> Máximo 4 por disco.</li>
+          <li><strong>Extendida:</strong> Contiene particiones lógicas.</li>
+          <li><strong>Lógica:</strong> Subdivisiones dentro de una extendida.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección: Sistemas de Archivos -->
+    <section class="interactive-section" id="sistemas-archivos">
+      <h2 onclick="toggleSection('sistemas-archivos')">Sistemas de Archivos ▼</h2>
+      <div class="content">
+        <p>Un sistema de archivos organiza y gestiona datos en un disco.</p>
+        <ul>
+          <li><strong>FAT32:</strong> Compatible con la mayoría de sistemas, límite de 4GB por archivo.</li>
+          <li><strong>NTFS:</strong> Sistema nativo de Windows, soporta grandes archivos.</li>
+          <li><strong>ext4:</strong> Sistema de archivos común en Linux.</li>
+          <li><strong>APFS:</strong> Sistema optimizado para macOS.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección: Sistemas Operativos -->
+    <section class="interactive-section" id="sistemas-operativos">
+      <h2 onclick="toggleSection('sistemas-operativos')">Sistemas Operativos ▼</h2>
+      <div class="content">
+        <p>Los sistemas operativos gestionan hardware y software.</p>
+        <ul>
+          <li><strong>Windows:</strong> Ampliamente utilizado, compatible con NTFS.</li>
+          <li><strong>Linux:</strong> Versátil, soporta múltiples sistemas de archivos.</li>
+          <li><strong>macOS:</strong> Optimizado para APFS.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección: Límites de Tamaño -->
+    <section class="interactive-section" id="limites-tamano">
+      <h2 onclick="toggleSection('limites-tamano')">Límites de Tamaño ▼</h2>
+      <div class="content">
+        <p>Los límites de tamaño dependen del sistema de archivos.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Sistema de Archivos</th>
+              <th>Tamaño Máximo de Archivo</th>
+              <th>Tamaño Máximo de Partición</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>FAT32</td>
+              <td>4GB</td>
+              <td>2TB</td>
+            </tr>
+            <tr>
+              <td>NTFS</td>
+              <td>16TB</td>
+              <td>256TB</td>
+            </tr>
+            <tr>
+              <td>ext4</td>
+              <td>16TB</td>
+              <td>1EB</td>
+            </tr>
+            <tr>
+              <td>APFS</td>
+              <td>8EB</td>
+              <td>8EB</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sección: Cronología -->
+    <section class="interactive-section" id="cronologia">
+      <h2 onclick="toggleSection('cronologia')">Cronología ▼</h2>
+      <div class="content">
+        <div class="timeline">
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">1981</span>
+              <span class="event-title">Lanzamiento de MS-DOS</span>
+            </div>
+            <div class="event-content">
+              <p>MS-DOS fue el primer sistema operativo ampliamente utilizado en computadoras personales. Introdujo el uso básico de particiones primarias.</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">1993</span>
+              <span class="event-title">Lanzamiento de Windows NT</span>
+            </div>
+            <div class="event-content">
+              <p>Windows NT introdujo el sistema de archivos NTFS, diseñado para mejorar la seguridad y el rendimiento.</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">1994</span>
+              <span class="event-title">Extensión ext2 en Linux</span>
+            </div>
+            <div class="event-content">
+              <p>El sistema de archivos ext2 se convirtió en el estándar para Linux, mejorando la eficiencia y la capacidad de almacenamiento.</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">2006</span>
+              <span class="event-title">Lanzamiento de ZFS</span>
+            </div>
+            <div class="event-content">
+              <p>ZFS, desarrollado por Sun Microsystems, introdujo características avanzadas como snapshots y protección contra corrupción de datos.</p>
+            </div>
+          </div>
+
+          <div class="timeline-event">
+            <div class="event-header" onclick="toggleTimelineEvent(this)">
+              <span class="event-date">2017</span>
+              <span class="event-title">Introducción de APFS en macOS</span>
+            </div>
+            <div class="event-content">
+              <p>Apple File System (APFS) reemplazó a HFS+ en macOS, optimizando el rendimiento en dispositivos SSD.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Guía Interactiva de Particiones y Sistemas</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
